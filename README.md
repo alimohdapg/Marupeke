@@ -1,8 +1,8 @@
 # Marupeke
 
-Documentation
+## Documentation
 
-Displaying the data:
+### Displaying the data:
 
 - The initial grid size is passed through the program&#39;s main method. This argument is used to initialize the class&#39;s marupeke grid object with a random marupeke grid of the specified size.
   - The randomPuzzle() method was limited to only generate finishable puzzles when the size is less than 6 (3-6). Larger puzzles are only legal as generating finishable grids for them takes a long time.
@@ -13,7 +13,7 @@ Displaying the data:
 - This method accesses the grid&#39;s marupekeTiles 2D array field and uses it to initialize each button in the GridPane.
 - Each time a call to updateGrid() is made, the GridPane is first cleared before it is again filled with the buttons in their appropriate state.
 
-Editing the data:
+### Editing the data:
 
 - Every editable button in the GridPane is configured with an event handler used for editing the tile&#39;s data.
 - When the user thus presses a button, multiple things happen:
@@ -28,7 +28,7 @@ Editing the data:
 - A single call is made to updateGrid() whenever the generate button is clicked with a size selected through the valid sizes combo box. Clearing the GridPane ensures that no buttons are left from the previous grid.
 - A single call is made to updateGrid() whenever the dark or light mode buttons are pressed.
 
-Optional extras:
+### Optional extras:
 
 - Optionally, the user can pass 4 arguments instead of one to the main method in order to create a more specific marupeke grid.
 - 2 themes were available for the grid, a dark mode, and a light mode. The buttons themselves are within the VBox on the right side of the BorderPane. However, the implementations of each theme are within the updateGrid() method (which is called every time one of the theme/mode buttons is pressed). When one of the dark mode or light mode buttons is pressed the value for the isDarkMode Boolean field is set to either true or false, respectively. Within the updateGrid() method, the style of each button in GridPane is set to the appropriate style according to whether isDarkMode is true or false. The proper implementation of the updateGrid() method also allows for the symbol of each editable tile to remain after changing the theme. This feature provides nice customizability which also helps with battling eye strain as it allows the user to choose the theme which better suits their current environment.
@@ -42,7 +42,7 @@ Optional extras:
   - The puzzleComplete sound effect is played when the user solves the puzzle with no illegalities present.
 - Each window opened within the program used the same icon throughout. This was implemented through first setting primary stage&#39;s icon. This icon is then used to set the icon of each window (as in alerts or dialogs which pop up). This feature further builds upon the visual consistency of different parts of the GUI.
 
-References:
+### References:
 
 Icon:
 
