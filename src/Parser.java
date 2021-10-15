@@ -1,12 +1,5 @@
 import java.util.Scanner;
 
-/**
- * @author ianw, bernhard
- * <p>
- * A very simple input line parser that parses each line written by the user to
- * the console. To use, create an object of this type, and then repeatedly call
- * getCommand.
- */
 public class Parser {
 
     private Scanner input;
@@ -15,12 +8,6 @@ public class Parser {
         input = new Scanner(System.in);
     }
 
-    /**
-     * Parse the input line, converting the first word encountered into a
-     * command, and then passing any further arguments that make sense.
-     *
-     * @return the parsed command
-     */
     public Command getCommand() {
         String inputLine = "";
         inputLine = input.nextLine();
